@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Class Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Session</th>
+                <th>Timing</th>
+                <th>Trainer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for session in schedule %}
+                <tr>
+                    <td>{{ session.session_name }}</td>
+                    <td>{{ session.timing }}</td>
+                    <td>{{ session.trainer }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

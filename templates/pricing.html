@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Pricing Plans</h2>
+    <div class="pricing-plans">
+        {% for plan in plans %}
+            <div class="plan">
+                <h3>{{ plan.name }}</h3>
+                <p>{{ plan.price }}</p>
+                <ul>
+                    {% for feature in plan.features %}
+                        <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="{{ url_for('membership') }}">Select Plan</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

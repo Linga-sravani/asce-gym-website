@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="welcome-section">
+        <h2>Welcome to ASCE Gym</h2>
+        <p>Your ultimate fitness destination!</p>
+        <img src="{{ url_for('static', filename='images/Home.png') }}" alt="Home">
+        <p>Explore our services, trainers, and membership plans to get started on your fitness journey.</p>
+    </section>
+    <section class="services">
+        <h3>Our Services</h3>
+        <ul>
+            <li>Fitness Classes</li>
+            <li>Personal Training</li>
+            <li>Gym Facilities</li>
+            <li>Nutrition Guidance</li>
+        </ul>
+    </section>
+{% endblock %}
